@@ -1,0 +1,966 @@
+/* ================= BASE ================= */
+@font-face {
+  font-family: "fayte";
+  src: url("../fonts/faytetest-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "instrument";
+  src: url("../fonts/InstrumentSerif-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "instrument italic";
+  src: url("../fonts/InstrumentSerif-Italic.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+.cabezote {
+  background-color: #8b0000;
+  padding: 15px 0;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logotipo img {
+  height: 50px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fffce1;
+  font-size: 14px;
+  font-family: "instrument";
+  text-transform: uppercase;
+}
+
+/* ================= PORTADA ================= */
+.portada {
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/cafeteria.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.titulo-marca {
+  font-size: 60px;
+  color: #fffce1;
+  font-family: "fayte";
+}
+
+.frase-intro {
+  color: #fffce1;
+  font-size: 16px;
+  font-family: "instrument italic";
+}
+
+.boton-rojo {
+  background-color: #fffce1;
+  color: #8b0000;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* ================= DIVISOR ================= */
+.divisor-productos {
+  padding: 80px 20px;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5)),
+    url("../images/Coffee.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.manuscrito {
+  font-size: 40px;
+  color: #8b0000;
+}
+
+.frase-destacada {
+  font-size: 18px;
+  color: #8b0000;
+}
+
+/* ================= CARDS ================= */
+.ofrecemos {
+  background-color: #8b0000;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo-seccion {
+  font-size: 50px;
+  margin-bottom: 40px;
+  font-family: "instrument";
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  background: #fffce1;
+  padding: 20px;
+  border: 1px solid #8b0000;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-family: "instrument";
+}
+
+.card p {
+  font-size: 14px;
+  color: #8b0000;
+  font-family: "instrument italic";
+}
+
+/* ================= POR QUÉ ================= */
+.contenido-porque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.columna {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.imagen-centro img {
+  width: 250px;
+}
+
+.item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.item::after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #ccc;
+  display: block;
+  margin: 10px auto;
+}
+
+.porque-nosotros {
+  background-color: #fffce1;
+  /* gris claro */
+  padding: 80px 20px;
+}
+
+.porque-nosotros .titulo-seccion {
+  text-align: center;
+}
+
+.slider-blancanieves {
+  padding: 80px 60px;
+  background: #f5efe6;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 24px;
+  row-gap: 0;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.galeria-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Row 1 — left starts at top, center is offset down, right starts at top but taller */
+.gi-r1c1 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+.gi-r1c2 {
+  margin-top: 80px;
+  margin-bottom: 24px;
+}
+.gi-r1c3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.gi-r1c1 img {
+  height: 380px;
+}
+.gi-r1c2 img {
+  height: 340px;
+}
+.gi-r1c3 img {
+  height: 480px;
+}
+
+/* Row 2 — all roughly same height, slight offsets */
+.gi-r2c1 {
+  margin-top: 40px;
+}
+.gi-r2c2 {
+  margin-top: 80px;
+}
+.gi-r2c3 {
+  margin-top: 40px;
+}
+
+.gi-r2c1 img {
+  height: 220px;
+}
+.gi-r2c2 img {
+  height: 220px;
+}
+.gi-r2c3 img {
+  height: 220px;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  /* 4 productos */
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.slide img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.slide h3 {
+  margin-top: 15px;
+  font-family: "instrument";
+}
+
+.slide p {
+  color: #8b0000;
+}
+
+/* botones */
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8b0000;
+  color: #fff;
+  border: none;
+  font-size: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: -10px;
+}
+
+.next {
+  right: -10px;
+}
+
+/* DOTS */
+.dots {
+  margin-top: 20px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 5px;
+  background: #ccc;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #8b0000;
+}
+
+.nosotros {
+  background-color: #fffce1;
+  padding: 120px 20px;
+}
+
+/* CONTENIDO */
+.nosotros-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* IMAGEN */
+.nosotros-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.nosotros-texto {
+  text-align: center;
+}
+
+.nosotros-texto h2 {
+  font-family: "instrument";
+  font-size: 28px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.nosotros-texto p {
+  font-family: "instrument";
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.3s;
+}
+
+/* BOTÓN */
+.btn-about {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid #8b0000;
+  color: #8b0000;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+
+.btn-about:hover {
+  background-color: #8b0000;
+  color: #fffce1;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.nosotros-tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f3f3;
+  padding: 20px;
+  position: relative;
+}
+
+/* TRIÁNGULO */
+.nosotros-tabs::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f3f3f3;
+}
+
+/* TAB */
+.tab {
+  text-align: center;
+  flex: 1;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+/* NÚMERO GRANDE */
+.tab span {
+  font-size: 60px;
+  color: #ccc;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* TEXTO TAB */
+.tab p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* ACTIVO */
+.tab.active {
+  opacity: 1;
+}
+
+.tab.active span {
+  color: #e89aa9;
+}
+
+.tab.active p {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+/* HOVER */
+.tab:hover {
+  opacity: 1;
+}
+
+.hero-pan {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/pagina\ principal\ masa\ madre.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Capa oscura */
+.hero-pan .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* efecto como el de tu imagen */
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-gallery {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/antim_photography-vintage-decor-6875829_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Capa oscura */
+.hero-gallery .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* efecto como el de tu imagen */
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contenido */
+.contenido-hero {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Título */
+.contenido-hero h1 {
+  font-family: "fayte";
+  font-size: 80px;
+  color: #8b0000;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+/* Texto */
+.contenido-hero p {
+  font-family: "instrument";
+  font-size: 18px;
+  color: #8b0000;
+  max-width: 600px;
+  margin: auto;
+}
+
+.seccion-especial {
+  position: relative;
+  background-color: #fffce1;
+  padding: 80px 20px 100px;
+  min-height: 100vh;
+}
+
+/* CONTENIDO */
+.contenido-especial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+/* TEXTO */
+.texto-especial h2 {
+  font-family: "fayte";
+  font-size: 76px;
+  color: #8b0000;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  font-family: "instrument italic";
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.texto-especial p {
+  font-family: "instrument";
+  font-size: 23px;
+  color: #8b0000;
+  max-width: 90%;
+  margin: auto;
+}
+
+/* IMAGEN */
+.imagen-especial img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+/* =========================
+   PAN FLOTANTE
+   ========================= */
+.pan-decorativo {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 5;
+}
+
+.pan-decorativo img {
+  width: 180px;
+}
+
+/* BOTÓN */
+.btn-menu {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 25px;
+  background-color: #8b0000;
+  color: #fffce1;
+  text-decoration: none;
+  font-family: "instrument";
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn-menu:hover {
+  background-color: #a50000;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .navegacion {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cabezote {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .menu ul {
+    flex-direction: row;
+  }
+
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 48%;
+  }
+
+  .slide {
+    min-width: 50%;
+  }
+
+  .nosotros-img img {
+    height: 450px;
+  }
+
+  .nosotros-texto h2 {
+    font-size: 32px;
+  }
+
+  .nosotros-texto p {
+    font-size: 17px;
+  }
+
+  .contenido-hero h1 {
+    font-size: 60px;
+  }
+
+  .contenido-hero p {
+    font-size: 16px;
+  }
+
+  .contenido-hero h1 {
+    font-size: 80px;
+  }
+
+  .contenido-hero p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+
+  .contenido-especial {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .texto-especial {
+    width: 50%;
+  }
+
+  .imagen-especial {
+    width: 50%;
+    text-align: center;
+  }
+
+  .imagen-especial img {
+    max-width: 350px;
+  }
+
+  .texto-especial h2 {
+    font-size: 60px;
+  }
+
+  .texto-especial p {
+    max-width: 400px;
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .pan-decorativo {
+    bottom: -70px;
+  }
+
+  .pan-decorativo img {
+    width: 220px;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+  .titulo-marca {
+    font-size: 120px;
+  }
+
+  .cabezote {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .frase-intro {
+    font-size: 24px;
+  }
+
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 30%;
+  }
+
+  /* 🔥 POR QUÉ BIEN HECHO */
+  .contenido-porque {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .columna {
+    width: 30%;
+    gap: 80px;
+  }
+
+  .imagen-centro {
+    width: 30%;
+    text-align: center;
+  }
+
+  .imagen-centro img {
+    width: 400px;
+  }
+
+  .divisor-productos {
+    min-height: 80vh;
+    /* 🔥 más grande */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .contenido-divisor {
+    max-width: 800px;
+  }
+
+  .manuscrito {
+    font-size: 90px;
+    /* 🔥 título grande */
+    margin-bottom: 20px;
+  }
+
+  .frase-destacada {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+
+  .titulo-seccion {
+    font-size: 70px;
+  }
+
+  .item p {
+    font-size: 18px;
+    /* 🔥 más legible */
+    line-height: 1.7;
+  }
+
+  .slide {
+    min-width: 25%;
+  }
+
+  .nosotros {
+    padding: 150px 20px;
+  }
+
+  .nosotros-contenido {
+    flex-direction: row;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .nosotros-img {
+    width: 50%;
+  }
+
+  .nosotros-img img {
+    height: 550px;
+  }
+
+  .nosotros-texto {
+    width: 50%;
+    text-align: left;
+  }
+
+  .nosotros-texto h2 {
+    font-size: 40px;
+  }
+
+  .nosotros-texto p {
+    font-size: 18px;
+    margin: 0 0 30px 0;
+  }
+
+  .nosotros-tabs {
+    justify-content: flex-start;
+    gap: 40px;
+  }
+
+  .tab span {
+    font-size: 80px;
+  }
+
+  .porque-nosotros {
+    height: 100vh;
+  }
+
+  .seccion-especial {
+    padding: 120px 20px;
+    position: relative;
+    background-color: #fffce1;
+  }
+
+  .contenido-especial {
+    gap: 80px;
+  }
+
+  .texto-especial h2 {
+    font-size: 80px;
+  }
+
+  .texto-especial p {
+    font-size: 25px;
+    max-width: 500px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+
+  .imagen-especial img {
+    max-width: 450px;
+  }
+
+  .pan-decorativo {
+    bottom: -90px;
+  }
+
+  .pan-decorativo img {
+    width: 260px;
+  }
+
+  .contenido-hero h1 {
+    font-size: 100px;
+    letter-spacing: 3px;
+  }
+
+  .contenido-hero p {
+    font-size: 25px;
+  }
+}
+
+/* ── SECCIÓN ROJA ── */
+.galeria-roja {
+  position: relative;
+  background-color: #9b1515;
+  padding: 60px 60px;
+}
+
+.galeria-roja::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/silla.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.galeria-roja-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.gr-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 320px;
+}
